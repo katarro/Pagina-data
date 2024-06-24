@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Encuentra el Mejor Bien Raíz en Santiago Centro</h1>
+    <p class="lead">Ingresa tus criterios y nuestro algoritmo seleccionará la mejor opción para ti.</p>
+    <hr class="my-4">
+    <form action="/search" method="post">
+        <div class="form-group">
+            <label for="criteria">Criterios de búsqueda</label>
+            <input type="text" class="form-control" id="criteria" name="criteria" placeholder="Ej. precio, ubicación, tamaño">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+</div>
+
+{% if property %}
+<div class="card">
+    <img class="card-img-top" src="{{ property.image_url }}" alt="Imagen de propiedad">
+    <div class="card-body">
+        <h5 class="card-title">{{ property.address }}</h5>
+        <p class="card-text">{{ property.description }}</p>
+        <p class="card-text"><small class="text-muted">{{ property.price }}</small></p>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
