@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Resultados de Búsqueda</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+    <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="{{ url_for('static', filename='lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="{{ url_for('static', filename='lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<style>
+    .result-card {
+      margin-top: 30px;
+      border-radius: 10px;
+      border: 1px solid #28a745;
+    }
+    .result-card-header {
+      background-color: #28a745;
+      color: white;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 15px;
+    }
+    .result-card-body {
+      padding: 20px;
+    }
+    .result-title {
+      color: #28a745;
+    }
+    .result-price {
+      color: #28a745;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    /* Main Stylesheet File */
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #28a745;
+    }
+
+    p {
+        color: #555;
+    }
+
+    .container {
+        max-width: 960px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    /* Additional styling for the results page */
+    .result-card {
+        margin-top: 30px;
+        border-radius: 10px;
+        border: 1px solid #28a745;
+    }
+
+    .result-card-header {
+        background-color: #28a745;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 15px;
+    }
+
+    .result-card-body {
+        padding: 20px;
+    }
+
+    .result-title {
+        color: #28a745;
+    }
+
+    .result-subtitle {
+        color: #555;
+    }
+
+    .result-price {
+        color: #28a745;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .image {
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <h1 class="result-title text-center">Resultados de Búsqueda</h1>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card result-card">
+              <div class="card-header result-card-header">
+                <h2 class="card-title mb-0">{{ departamento['nombre'] }}</h2>
+              </div>
+              <div class="card-body result-card-body">
+                <p class="result-subtitle">Ubicación: {{ departamento['ubicacion'] }}</p>
+                <p class="result-price">Precio: {{ departamento['precio'] }}</p>
+                <p class="result-description">Descripción: {{ departamento['descripcion'] }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="image" src="https://media.admagazine.com/photos/6317bd95d75f2fd76bd148aa/master/w_1600%2Cc_limit/APR%2520-%2520Nooor%2520-%2520Appartement%252045m2%2520rue%2520de%2520Grenelle%2520-%2520cre%25CC%2581dit%2520Nicolas%2520MatheusG19_2044.jpg" alt="">
+      </div>
+
+</body>
+
+</html>
