@@ -12,7 +12,7 @@ def get_best_property(criteria):
         "address": "Calle Falsa 123, Santiago Centro",
         "price": "100,000,000 CLP",
         "description": "Un hermoso apartamento en el corazón de Santiago Centro.",
-        "image_url": "https://via.placeholder.com/150"
+        # "image_url": "https://via.placeholder.com/150"
     }
 
 @app.route('/')
